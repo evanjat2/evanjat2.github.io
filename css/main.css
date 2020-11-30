@@ -1,0 +1,208 @@
+@font-face{
+    font-family: Roboto Mono;
+    src: url("../font/RobotoMono-VariableFont_wght.ttf");
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+#landing-page {
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-image: url(../picture/bgdark.jpg);
+}
+.welcome-text {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    top: 45%;
+    text-align: center;
+    color: white;
+    transform: scale(1);
+    font-family: Roboto Mono ;
+    letter-spacing: 2px;
+    text-shadow: -3px 0  #180083, 0 3px  #180083, 3px 0  #180083, 0 -3px  #180083;
+    animation: flicker 5s infinite;
+}
+
+@keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+		opacity: .99;
+		text-shadow: 0 0 10px  #180083, 0 0 20px #180083, 0 0 30px  #180083, 0 0 40px   #180083, 0 0 50px #180083;
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+		text-shadow: none;
+	}
+}
+
+ul.nav {
+    position: sticky;
+    top: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: end;
+    background-image:linear-gradient(rgb(2, 2, 70), black);
+}
+
+.nav > li {
+    display: inline-block;
+    margin: auto;
+    color: white;
+    font-weight: 300;
+}
+
+.nav > li > a {
+    padding: 1em 0.6em;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+}
+
+.nav > li > a:hover {
+    background-color: teal;
+}
+
+hr {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.desktop {
+    display: none !important;
+}
+
+hr {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.section-introduction , .section-education , .section-working {
+    text-align: center;
+}
+
+.section-education , .section-working {
+    display: inline-block;
+    margin-top: 5em;
+}
+
+.img-icon {
+    width: 12em;
+}
+
+#about-me {
+    padding: 2em 0;
+}
+
+.content-introduction {
+    font-size: 20px;
+    width: 80%;
+    max-width: 24em;
+    margin: 1em auto;
+    text-align: center;
+}
+
+.title-tech-stack , .title-opinion {
+    text-decoration: underline;
+    text-align: center;
+    color: brown;
+}
+
+.red {
+    color: red;
+}
+
+.blue{ 
+    color: blue;
+}
+#tech-stack {
+    width: 100%;
+    padding: 2em 0;
+}
+
+.container {
+    width: 90%;
+    overflow: hidden;
+    text-align: center;
+    padding: 2% 5% 0% 5%;
+} 
+
+.container p , #funfact p{
+    font-size: 20px;
+    text-align: center;
+    padding: 0 5px 0 5px;
+}
+
+.img-tech-stack , .img-opinion {
+    display: inline-block;
+    width: 90%;
+    vertical-align: middle;
+    margin: 20px auto;
+    margin-bottom: 2em;;
+}
+
+.img-tech-stack {
+    max-width: 500px;
+}
+
+.img-opinion {
+    max-width: 300px;
+    margin: 20px;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .nav > li > a {
+        padding: 1em 2em;
+    }
+
+    .desktop {
+        display: block !important;
+    }
+    li.nav-icon {
+        padding: 0;
+        width: 45px;
+        margin: .3em 1em;
+        float: left;
+    }
+
+    .nav-icon > img {
+        width: 100%;
+    }
+    .section-working, .section-education {
+        width: 49.5%;
+        vertical-align: top;
+    }
+
+    hr {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+.footer {
+    position: sticky;
+    top: 0;
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    background-image:linear-gradient(rgb(2, 2, 70), black);
+}
+
+.title-funfact{
+    text-decoration: underline;
+    text-align: center;
+    color: white;
+}
+
+.footer a img {
+    width: 37px;
+    margin: 3px 10px 3px 0;
+}
